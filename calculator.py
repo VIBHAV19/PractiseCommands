@@ -6,13 +6,15 @@ class cal():
         return self.a + self.b
     def sub(self):
         return self.a - self.b
+    def multiply(self):
+        return self.a * self.b
 
 a = int(input('Enter First number : '))
 b = int(input('Enter Second number : '))        
 obj=cal(a,b)
 while True:    
     def menu():
-        x = ('1. Add  \n2. Sub \n') 
+        x = ('1. Add \n2. Sub \n3. Multiply \n') 
         print(x)
     menu()
     choice = int(input('Please select one of the following : ')) 
@@ -20,6 +22,8 @@ while True:
         print("Result: ",obj.add())
     elif choice == 2:
         print("Result: ",obj.sub())
+    elif choice == 3:
+        print("Result: ",obj.multiply())
     else:
         print('Invalid option') 
         break       
